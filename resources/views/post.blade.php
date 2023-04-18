@@ -2,11 +2,14 @@
 
 @section('container')
 
-
+<h1 class="mb-5">Posts : {{ $post->title }}</h1>
 <article class="mb-5">
     <h2>
         {{ $post->title }}
     </h2>
+
+    <p>By. Jason Oktavian in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+
     {{-- <h5>{{ $post["author"] }}</h5> --}}
     {{-- {{ $post->body }} --}}
     {!! $post->body !!}
