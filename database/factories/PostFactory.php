@@ -21,7 +21,7 @@ class PostFactory extends Factory
             'slug' => fake()->unique()->slug(),
             'excerpt' => fake()->paragraph(),
             'body' => fake()->paragraph(mt_rand(5, 10)), // password
-            'category_id' => mt_rand(1, 2),
+            'category_id' => mt_rand(1, 3),
             'user_id' => mt_rand(1, 5)
         ];
     }

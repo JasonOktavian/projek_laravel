@@ -32,14 +32,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'anthony.chandra@gmail.com',
         //     'password' => bcrypt('12345')
         // ]);
-        Category::create([
-            'name' => 'Web Programming',
-            'slug' => 'web-programming'
-        ]);
-        Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal'
-        ]);
+
+        // Category::create([
+        //     'name' => 'Web Programming',
+        //     'slug' => 'web-programming'
+        // ]);
+        // Category::create([
+        //     'name' => 'Personal',
+        //     'slug' => 'personal'
+        // ]);
+
+        Category::factory(3)->create();
 
         Post::factory(20)->create();
         //Post::create([
