@@ -12,7 +12,7 @@
                     {{ $post->title }}
                 </h2>
 
-                <p>By. <a href="/authors/{{ $post->user->id }}" class="text-decoration-none"> {{ $post->user->name }}</a> in <a href="/categories/{{ $post->category->slug }}"class="text-decoration-none">{{ $post->category->name }}</a></p>
+                <p>By. <a href="/blog?user={{ $post->user->username }}" class="text-decoration-none"> {{ $post->user->name }}</a> in <a href="/blog?category={{ $post->category->slug }}"class="text-decoration-none">{{ $post->category->name }}</a></p>
 
                 {{-- <h5>{{ $post["author"] }}</h5> --}}
                 {{-- {{ $post->body }} --}}
