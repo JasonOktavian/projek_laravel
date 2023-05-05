@@ -3,10 +3,16 @@
 @section('container')
 <div class="row justify-content-center">
     <div class="col-lg-6 card p-3">
+        @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         <main class="form-registration w-100 m-auto">
             <img class="mb-4 rounded mx-auto d-block" src="/img/logo.jpg" alt="" width="72" height="57">
             <h1 class="h3 mb-3 fw-normal text-center">Registrasion Form</h1>
-            <form action="/register" method="POST">
+            <form action="/register" method="post">
                 @csrf
                 <div class="form-floating">
                     <input type="text" class="form-control rounded-top @error('name')

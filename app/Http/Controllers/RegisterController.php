@@ -29,7 +29,7 @@ class RegisterController extends Controller
         $validatedData['password'] = bcrypt($validatedData['password']);
 
         //Sama aja pake bcrypt bedanya ini syntax laravel
-        $validatedData['password'] = Hash::make($validatedData['password']);
+        // $validatedData['password'] = Hash::make($validatedData['password']);
         User::create($validatedData);
         // $request->session()->flash('success', 'Registration was successful! Please Login!');
         return redirect('/login')->with('success', 'Registration was successful! Please Login!');
