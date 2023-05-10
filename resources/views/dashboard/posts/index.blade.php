@@ -5,8 +5,18 @@
     <h1 class="h2">{{ Auth::user()->name }}, Posts</h1>
 </div>
 
+@if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+ @endif
+
 <div class="d-flex justify-content-center">
 <div class="table-responsive col-lg-8">
+
+
+    <a href="/dashboard/posts/create" class="btn btn-success mb-3">Create New Post</a>
     <table class="table table-striped table-sm justify-content-center">
         <thead class="text-center">
             <tr>
@@ -28,11 +38,12 @@
                     <a href="/dashboard/posts/" class="badge bg-dark px-2"><i class="bi bi-trash"></i></a>
                     <a href="/dashboard/posts/" class="badge bg-dark px-2"><i class="bi bi-clock-history"></i></a>
                 </td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    </div>
+</div>
 </div>
 @endsection
-</div>
 
