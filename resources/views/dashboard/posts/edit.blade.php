@@ -43,6 +43,16 @@
             </select>
         </div>
         <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input class="form-control @error('image') is-invalid
+            @enderror" type="file" name="image" id="image" placeholder="Upload Image file">
+            @error('image')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+        <div class="mb-3">
             <label for="body" class="form-label">Content's</label>
             @error('body')
             <div class="alert alert-warning alert-dismissible fade show" role="alert">

@@ -6,7 +6,7 @@
     <h1 class="h2">Create New Post</h1>
 </div>
 <div class="col-lg-8">
-    <form method="POST" action="/dashboard/posts">
+    <form method="POST" action="/dashboard/posts" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
@@ -31,7 +31,7 @@
         </div>
         <div class="mb-3">
             <label for="categoy" class="form-label">Category</label>
-            <select class="form-select" id="category_id" name="category_id" value="{{ old('category') }}">
+            <select class="form-select" id="category_id" name="category_id">
                 @foreach ($categories as $category)
                 @if (old('category_id') == $category->id)
                     <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
@@ -40,6 +40,16 @@
                 @endif
                 @endforeach
             </select>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input class="form-control @error('image') is-invalid
+            @enderror" type="file" name="image" id="image" placeholder="Upload Image file">
+            @error('image')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="body" class="form-label">Content's</label>
