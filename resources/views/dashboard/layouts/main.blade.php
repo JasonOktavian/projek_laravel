@@ -21,6 +21,13 @@
         trix-toolbar [data-trix-button-group="file-tools"]{
             display: none;
         }
+
+        .btnn{
+        color: black;
+    }
+    .btnn:hover{
+        color: white;
+    }
     </style>
     <style>
       .bd-placeholder-img {

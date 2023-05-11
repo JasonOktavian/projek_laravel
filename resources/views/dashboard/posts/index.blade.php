@@ -6,7 +6,7 @@
 </div>
 
 @if (session()->has('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
@@ -16,7 +16,7 @@
 <div class="table-responsive col-lg-8">
 
 
-    <a href="/dashboard/posts/create" class="btn btn-success mb-3">Create New Post</a>
+    <a href="/dashboard/posts/create" class="btn btn-outline-success mb-3 btnn">Create New Post</a>
     <table class="table table-striped table-sm justify-content-center">
         <thead class="text-center">
             <tr>
@@ -34,9 +34,13 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->category->name }}</td>
                 <td>
-                    <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-dark px-2"><span class="bi bi-book"></span></a>
-                    <a href="/dashboard/posts/" class="badge bg-dark px-2"><i class="bi bi-trash"></i></a>
-                    <a href="/dashboard/posts/" class="badge bg-dark px-2"><i class="bi bi-clock-history"></i></a>
+                    <a href="/dashboard/posts/{{ $post->slug }}" class="border-0 btn btn-outline-info btnn"><span class="bi bi-book"></span></a>
+                    <form action="/dashboard/posts/{{ $post->slug }}" class="d-inline" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="border-0 btn btn-outline-danger btnn" onclick="return confirm('Are you sure to delete this post?')"><i class="bi bi-trash"></i></button>
+                    </form>
+                    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="border-0 btn btn-outline-secondary btnn"><i class="bi bi-clock-history"></i></a>
                 </td>
             </tr>
             @endforeach
