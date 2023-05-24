@@ -13,11 +13,29 @@
             My Post
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/posts*')? 'active':'' }}" href="/dashboard/posts">
+            <span class="align-text-bottom"><i class="bi bi-images"></i></span>
+            Gallery
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/posts*')? 'active':'' }}" href="/dashboard/posts">
+            <span class="align-text-bottom"><i class="bi bi-envelope"></i></span>
+            Message's
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/posts*')? 'active':'' }}" href="/dashboard/posts">
+            <span class="align-text-bottom"><i class="bi bi-people-fill"></i></span>
+            Friend's
+          </a>
+        </li>
 
         @can('admin')
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             </span>
-                Admin
+                admin
             <span>
         </h6>
 

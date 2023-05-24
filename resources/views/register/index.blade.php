@@ -66,7 +66,7 @@
               </div>
               <button class="w-100 btn btn-lg btn-outline-dark mt-3" type="submit">Register</button>
             </form>
-            <small class="d-block text-center mt-2">Already Registered? <a href="/login">Click Here!</a></small>
+            <small class="d-block text-center mt-2">already Registered? <a href="/login">Click Here!</a></small>
           </main>
     </div>
 </div>
