@@ -29,6 +29,12 @@
 <body class="bg-slate-100 dark:bg-gray-800">
     @include('partials.navbar')
 
+    @hasSection('home')
+    <div class="bg-gradient-to-tr from-sky-500 to-blue-500">
+        @yield('home')
+    </div>
+    @endif
+    {{-- bg-gradient-to-tr from-cyan-500 to-blue-500 --}}
     <div class="container mx-auto">
         @yield('container')
     </div>
@@ -37,6 +43,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="/js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 
 </body>
 

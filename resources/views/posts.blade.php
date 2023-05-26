@@ -66,7 +66,7 @@
 </div> --}}
 
 <div class="lg:container">
-    <div class="grid grid-rows-2 grid-flow-col mx-auto ">
+    <div class="grid grid-rows-2 grid-flow-col mx-auto -z-50">
         @foreach ( $posts->skip(1) as $post)
         <div class="relative md:col-span-2 my-3 mx-auto dark:text-white">
             <div class="max-w-sm rounded overflow shadow-lg bg-white dark:bg-gray-900">

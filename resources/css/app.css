@@ -13,3 +13,21 @@
       scrollbar-width: none; /* Firefox */
     }
 }
+
+@layer base{
+    @font-face{
+        font-family: "Oxygen";
+        font-weight: 400 ;
+        src:url('/font/Oxygen.woff2') format('woff2'), url('/font/Oxygen.woff') format('woff')
+    },
+    @font-face{
+        font-family: "Oxygen";
+        font-weight: 400 ;
+        src:url('/font/OxygenBold.woff2') format('woff2'), url('/font/OxygenBold.woff') format('woff')
+    },
+    @font-face{
+        font-family: "Oxygen";
+        font-weight: 400 ;
+        src:url('/font/OxygenLight.woff2') format('woff2'), url('/font/OxygenLight.woff') format('woff')
+    }
+}

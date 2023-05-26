@@ -1,9 +1,9 @@
-<nav class=" bg-white border-gray-200 dark:bg-gray-900">
+<nav class=" bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between p-4">
         <div class="inline-flex">
             <a class="flex items me-3" href="/">
                 <img src="/img/logovz.png" class="h-10 mr-3" alt="">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">VZBlog</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-950 dark:text-white">VZBlog</span>
             </a>
             <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                 <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -21,7 +21,7 @@
                     <a class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentk {{ Request::is('/')? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500':'' }}" href="/">Home</a>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentk {{ Request::is('about')? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500':'' }}" href="/about">about</a>
+                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentk {{ Request::is('about')? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500':'' }}" href="/about">About</a>
                 </li>
                 <li>
                     <a class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentk {{ Request::is('blog')? 'active':'' }}" href="/blog">Blog</a>
