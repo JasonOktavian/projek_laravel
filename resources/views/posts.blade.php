@@ -30,7 +30,7 @@
 </div>
 
 @if ($posts->count())
-<div class="max-w-[77rem] rounded overflow-auto shadow-lg my-4 bg-white mx-auto dark:bg-gray-900 dark:text-white         no-scrollbar">
+<div class="max-w-[77rem] rounded overflow-auto shadow-lg my-4 bg-white mx-auto dark:bg-gray-900 dark:text-white  no-scrollbar">
     @if ($posts[0]->image)
         <div class="px-3 py-2 mx-auto my-auto">
             <img src="{{ asset('storage/' . $posts[0]->image) }}" class="mx-auto mb-1 w-[1200px] h-[200px] object-contain" alt="{{ $posts[0]->category->name }}">

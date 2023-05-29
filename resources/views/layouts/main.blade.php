@@ -26,16 +26,21 @@
     <link rel = "icon" href = "/img/logovz.png" type = "image/x-icon">
 </head>
 
+@if (array_key_exists('home', View::getSections()))
+<body class="bg-gradient-to-tr from-[#4895ef] via-[#4cc9f0] to-[#4361ee] dark:bg-gradient-to-tr dark:from-[#2C74B3] dark:to-[#205295]">
+@else
 <body class="bg-slate-100 dark:bg-gray-800">
+@endif
+
     @include('partials.navbar')
 
     @hasSection('home')
-    <div class="bg-gradient-to-tr from-sky-500 to-blue-500">
+    <div class="mx-auto relative bg-bgi bg-no-repeat bg-contain">
         @yield('home')
     </div>
     @endif
     {{-- bg-gradient-to-tr from-cyan-500 to-blue-500 --}}
-    <div class="container mx-auto">
+    <div class="container mx-auto bg bg-slate-100 dark:bg-gray-800">
         @yield('container')
     </div>
 

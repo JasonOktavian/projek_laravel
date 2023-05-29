@@ -19,7 +19,10 @@ module.exports = {
         },
         fontFamily:{
             'sans': ['Oxygen', ...defaultTheme.fontFamily.sans],
-        }
+        },
+        backgroundOpacity:{
+            '40%': '40%',
+        },
       },
     },
     plugins: [

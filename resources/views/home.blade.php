@@ -39,18 +39,36 @@
         </span>
     </button>
 </div> --}}
+
+
+<h1 class="font-bold text-blue-950 dark:text-blue-300 font-sans text-3xl pt-4 pb-2 text-center max-w-full min-w-full">Publish Your Passion In Your Own Ways</h1>
+<h1 class="font-bold text-blue-900 dark:text-blue-200 font-sans inline-block text-xl text-center max-w-full min-w-full">Create Unique and Interesting Blog</h1>
+
+<img src="img/logovz.png" class="min-w-full" alt="">
+
 {{-- <div class="relative">
-    <h1 class="absolute text-center font-extrabold z-20">Publish Your Passion In Your Own Ways</h1>
-    <img src="/img/bgi.png" class="bg-fixed z-0 rounded-md min-w-[calc(100%+32px)] -ml-4 -my-8" alt="">
+    <h1 class="font-bold text-blue-950 dark:text-blue-300 font-sans inline-block text-3xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-64 z-10">Publish Your Passion In Your Own Ways</h1>
+    <h1 class="font-bold text-blue-900 dark:text-blue-200 font-sans inline-block text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[14rem] z-10">Create Unique and Interesting Blog</h1>
+    <div class="w-3/5 h-3/4 bg-[#3f37c9] dark:bg-[#144272] dark:text-white rounded-t-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[33%] z-10">
+        <div class="bg-white dark:bg-gray-900 dark:text-white rounded-t-lg absolute w-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[42%] text-center">
+            <h1 class="text-2xl bg-[#3a0ca3] dark:bg-[#0A2647] rounded-t-lg font-bold p-6">Technology Update</h1>
+            <h1 class="font-bold p-2">3 Easy Steps To Build Your Own Website</h1>
+            <h1 class="font-thin text-left p-3">Monday, 17 January 2023</h1>
+            <img src="img/imge.png" class="transform content-cover m-auto" alt="">
+        </div>
+        <img src="img/net.svg" class="rounded-t-lg object-contain" alt="">
+    </div>
+    <img src="/img/bgi.svg" class="opacity-40 min-w-full -z-50" alt="">
 </div> --}}
-<div class="">
-    <h1 class="font-bold text-blue-950 font-sans inline-block text-center text-3xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-44">Publish Your Passion In Your Own Ways</h1>
-    <img src="/img/bgi.svg" class="opacity-40 min-w-full" alt="">
+
+<div class="bg-slate-100 dark:bg-gray-800">
+    <div class="container mx-auto">
+test
+    </div>
 </div>
 
-
 @endsection
 
-@section('container')
+{{-- @section('container')
 <div>Ini isi dari home/landing page</div>
-@endsection
+@endsection --}}
