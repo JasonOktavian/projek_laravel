@@ -33,13 +33,13 @@
         <div class="hidden w-full lg:inline-flex md:w-auto" id="navbarNav">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0">
                 <li>
-                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('about')? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500':'' }}" href="/about">About</a>
+                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('about')? "md:text-[#4942E4] md:p-0 dark:text-white md:dark:text-[#FFF5B8]":'' }}" href="/about">About</a>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('blog')? 'active':'' }}" href="/blog">Blog</a>
+                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('blog')? 'md:text-[#4942E4] md:p-0 dark:text-white md:dark:text-[#FFF5B8]':'' }}" href="/blog">Blog</a>
                 </li>
                 <li>
-                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('categories')? 'active':'' }}" href="/categories">Categories</a>
+                    <a class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ Request::is('categories')? 'md:text-[#4942E4] md:p-0 dark:text-white md:dark:text-[#FFF5B8]':'' }}" href="/categories">Categories</a>
                 </li>
             </ul>
 
@@ -68,7 +68,8 @@
 
             @else
             <li>
-                <a href="/login" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" {{ ($active === "login") ? 'active': '' }}><i class="bi bi-box-arrow-in-right ms-4"></i> Login</a>
+                <a href="/login" class="pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white"><i class="bi bi-box-arrow-in-right ms-4 {{ Request::is('login')? 'md:text-[#4942E4] md:p-0 dark:text-white md:dark:text-[#FFF5B8]':'' }}"> Login</i></a>
+                {{-- <a href="/login" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:border-0 md:hover:text-[#4942E4] md:p-0 dark:text-white md:dark:hover:text-[#FFF5B8] dark:hover:text-white {{ ($active === "login") ? 'active': '' }}"><i class="bi bi-box-arrow-in-right ms-4"></i> Login</a> --}}
             </li>
             @endauth
             </ul>

@@ -66,12 +66,12 @@
 </div> --}}
 
 <div class="lg:container">
-    <div class="grid grid-rows-2 grid-flow-col mx-auto -z-50">
+    <div class="grid md:grid-rows-2 md:grid-flow-col mx-auto -z-50 sm:grid sm:grid-rows-3">
         @foreach ( $posts->skip(1) as $post)
         <div class="relative md:col-span-2 my-3 mx-auto dark:text-white">
             <div class="max-w-sm rounded overflow shadow-lg bg-white dark:bg-gray-900">
-                <div class="absolute px-3 py-2 rounded bg-slate-800 opacity-60">
-                    <a href="/blog?category={{ $post->category->slug }}" class="no-underline text-white">{{ $post->category->name }}</a>
+                <div class="absolute px-3 py-2 rounded bg-slate-800 opacity-60 hover:bg-white transition-all">
+                    <a href="/blog?category={{ $post->category->slug }}" class="no-underline text-white hover:text-black">{{ $post->category->name }}</a>
                 </div>
                 @if ($post->image)
                 <div style="">
