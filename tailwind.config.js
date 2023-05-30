@@ -15,11 +15,17 @@ module.exports = {
       extend: {
         backgroundImage:{
             'bgi':"url('/public/img/bgi.svg')",
-            'bgip':"url('/public/img/bgi.png')",
+            'bgin':"url('/public/img/net.svg')",
         },
         fontFamily:{
             'sans': ['Oxygen', ...defaultTheme.fontFamily.sans],
         },
+        backgroundSize: {
+            '50%': '50%',
+            '80%': '80%',
+            '100%': '100%',
+            '16': '4rem',
+          },
         backgroundOpacity:{
             '40%': '40%',
         },

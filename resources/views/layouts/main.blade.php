@@ -23,11 +23,11 @@
         }
     </script>
     <title>Personal Blog | {{ $title }} </title>
-    <link rel = "icon" href = "/img/logovz.png" type = "image/x-icon">
+    <link rel = "icon" href = "/img/logo.png" class="invert" type = "image/x-icon">
 </head>
 
 @if (array_key_exists('home', View::getSections()))
-<body class="bg-gradient-to-tr from-[#4895ef] via-[#4cc9f0] to-[#4361ee] dark:bg-gradient-to-tr dark:from-[#2C74B3] dark:to-[#205295]">
+<body class="bg-[#5BC0F8] dark:bg-[#205295]">
 @else
 <body class="bg-slate-100 dark:bg-gray-800">
 @endif
@@ -35,7 +35,7 @@
     @include('partials.navbar')
 
     @hasSection('home')
-    <div class="mx-auto relative bg-bgi bg-no-repeat bg-contain">
+    <div class="mx-auto relative bg-bgi bg-no-repeat bg-100%">
         @yield('home')
     </div>
     @endif
