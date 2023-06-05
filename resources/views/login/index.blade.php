@@ -59,10 +59,11 @@
       <div
         class="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
         <div
-          class="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+        class="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+        <h1 class="text-3xl text-center text-black dark:text-white absolute min-w-full mt-14">Login Form</h1>
           <img
             src="img/logo.png"
-            class="w-full"
+            class="w-full invert dark:invert-0"
             alt="img/logovz.png" />
         </div>
 
@@ -210,7 +211,7 @@
               </button>
 
               <!-- Register link -->
-              <p class="mb-0 mt-2 pt-1 text-sm font-semibold">
+              <p class="mb-0 mt-2 pt-1 text-sm font-semibold dark:text-white">
                 Don't have an account?
                 <a
                   href="/register"
