@@ -18,6 +18,12 @@
     .activate{
         @apply md:text-[#4942E4] md:p-0 dark:text-white md:dark:text-[#FFF5B8];
     }
+    .sidebar{
+      transition:all .4s ease-in-out;
+    }
+    .animate{
+      transition:all .4s ease-in-out;
+    }
 }
 
 @layer base{

@@ -1,9 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-5 border-bottom">
-    <h1 class="h2">{{ auth::user()->name }}, Categories Management</h1>
-</div>
+<h1 class="text-2xl text-center mb-2 font-bold">{{ Auth::user()->name }}, Categories Management</h1>
 
 @if (session()->has('success'))
 <div class="d-flex justify-content-center">
@@ -14,33 +12,34 @@
 </div>
  @endif
 
-<div class="d-flex justify-content-center">
-<div class="table-responsive col-lg-8">
-
-    <a href="/dashboard/categories/create" class="btn btn-outline-success mb-3 btnn">Create New Category</a>
-    <table class="table table-striped table-sm justify-content-center">
-        <thead class="text-center">
+    <a href="/dashboard/categories/create" class="mb-3 bg-green-500 p-4 inline-block rounded-md">Create New Category</a>
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mb-3">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
             <tr>
-                <th scope="col">No</th>
-                <th scope="col">Category Name</th>
-                <th scope="col">Image</th>
-                <th scope="col">action</th>
+                <th scope="col" class="px-6 py-3">No</th>
+                <th scope="col" class="px-6 py-3">Category Name</th>
+                <th scope="col" class="px-6 py-3">Image</th>
+                <th scope="col" class="px-6 py-3">action</th>
             </tr>
         </thead>
         <tbody class="text-center">
             @foreach ($categories as $category )
 
-            <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{ $category->name }}</td>
-                <td><img src="https://source.unsplash.com/40x40?{{ $category->name }}" alt=""></td>
-                <td>
-                    <form action="/dashboard/categories/{{ $category->slug }}" class="d-inline" method="post">
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{ $loop->iteration }}
+                </td>
+                <td class="px-6 py-4">{{ $category->name }}</td>
+                <td class="px-6 py-4 justify-center items-center flex">
+                    <img src="https://source.unsplash.com/80x80?{{ $category->name }}" alt="">
+                </td>
+                <td class="px-6 py-4">
+                    <form action="/dashboard/categories/{{ $category->slug }}" class="inline-flex" method="post">
                         @method('delete')
                         @csrf
-                        <button type="submit" class="border-0 btn btn-outline-danger btnn" onclick="return confirm('are you sure to delete this category?')"><i class="bi bi-trash"></i></button>
+                        <button type="submit" class="bg-red-400 p-1 btnn rounded-md btnn" onclick="return confirm('are you sure to delete this category?')"><i class="bi bi-trash"></i></button>
                     </form>
-                    <a href="/dashboard/categories/{{ $category->slug }}/edit" class="border-0 btn btn-outline-secondary btnn"><i class="bi bi-clock-history"></i></a>
+                    <a href="/dashboard/categories/{{ $category->slug }}/edit" class="bg-green-400 p-1 btnn rounded-md btnn"><i class="bi bi-clock-history"></i></a>
                 </td>
             </tr>
             @endforeach
